@@ -1,14 +1,14 @@
-import React from 'react';
-import ArtistDetails from './component/ArtistDetails'; 
-import { artists } from './best-selling-music-artists';
+import { ArtistList } from "./component/ArtistList";
+import { artists } from "./best-selling-music-artists";
+import styles from "./App.module.css";
 
 function App() {
   return (
     <div className="App">
-      <h1>Best-selling Music Artists</h1>
-      {artists.map((artist, index) => (
-        <ArtistDetails key={index} artist={artist} />
-      ))}
+      <section className={styles.container}>
+        <h1>Best-selling music artists</h1>
+        <ArtistList artists={artists} />
+      </section>
     </div>
   );
 }
